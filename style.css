@@ -1,0 +1,134 @@
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    direction: ltr;
+
+}
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft_Magenta: hsl(300, 69%, 71%);
+}
+header{
+    width: 100%;
+}
+body {
+    padding: 25px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Violet);
+    background-repeat: no-repeat;
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    background-size: contain;
+}
+main{
+    color: white;
+    width: 90%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    grid-gap: 50px;
+}
+main img{
+    width: 100%;
+}
+div.btn{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background: white;
+    color: var(--Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: white;
+}
+ion-icon{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin:0px 15px;
+}
+h1{
+    font-size: clamp(0px, 3.5vw, 50px);
+
+}
+p{  
+    color: rgba(255, 255, 255, 0.753);
+    margin: 20px 0px;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: clamp(0px, 2vw, 19px);
+}
+section{
+    padding: 20px 0px;
+}
+ion-icon:active{
+    color: var(--Soft_Magenta);
+    border-color: var(--Soft_Magenta);
+}
+div.btn:active{
+    color: white;
+    background-color: var(--Soft_Magenta);
+}
+@media screen and (max-width:450px){
+    main{
+        text-align: center;
+        width: 90%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr;
+        position: relative;
+        grid-gap: 50px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size: 25px;
+    }
+    footer{
+        justify-content: center;
+    }
+    ion-icon{
+        height: 25px;
+        width: 25px;
+    }
+    p{
+        line-height: 20px;
+        font-size: 15px;
+    }
+    body{
+        background-position: top;
+        background-size: contain;
+        background-image: url(./images/bg-mobile.svg);
+    }
+}
